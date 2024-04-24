@@ -7,4 +7,4 @@ Useful bash scripts for random stuff
 
 
 **file_ext_bypass**
-- Created worlist for file extension bypass fuzzing. Change as needed.
+- Creates worlist for file extension bypass fuzzing. Change as needed.
