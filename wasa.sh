@@ -1,11 +1,12 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-  echo "Usage: $0 <URL>"
+  echo "Usage: $0 <URL> [<PORT>]"
   exit 1
 fi
 
 TARGET=$(echo $1 | awk -F/ '{print $3}')
+PORT=${2:-443}
 
 if [ -z "$TARGET" ]; then
   echo "Invalid URL provided. Please check the URL."
@@ -30,7 +31,7 @@ sslscan_scan() {
 
 nikto_scan() {
   echo "Starting Nikto scan on $TARGET"
-  nikto -h "$TARGET" -k >> "$OUTPUT_FILE" 2>&1
+  nikto -h "$TARGET" -p "$PORT" -k >> "$OUTPUT_FILE" 2>&1
 }
 
 nmap_scan &
