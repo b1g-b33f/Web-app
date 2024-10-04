@@ -49,26 +49,28 @@ nikto_scan() {
   nikto -h "$TARGET" >> "$OUTPUT_FILE" 2>&1
 }
 
-echo "Gathering HTTP headers..." 
 gather_headers "$1" &
+GATHER_HEADERS_PID=$!
 
-echo "Running Nmap scan..." 
+wait $GATHER_HEADERS_PID
+echo "Gathering HTTP headers completed."
+
 nmap_scan &
 NMAP_PID=$!
+wait $NMAP_PID
+echo "Nmap scan completed."
 
-echo "Running sslscan..." 
 sslscan_scan &
 SSLSCAN_PID=$!
+wait $SSLSCAN_PID
+echo "sslscan completed."
 
-echo "Running Nikto scan..." 
 nikto_scan &
 NIKTO_PID=$!
-
-wait $NMAP_PID
-wait $SSLSCAN_PID
 wait $NIKTO_PID
-wait
+echo "Nikto scan completed."
 
 echo "All scans completed for $TARGET. Results saved to $OUTPUT_FILE."
 
 exit 0
+
