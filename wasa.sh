@@ -61,24 +61,17 @@ nikto_scan() {
   echo "" >> "$OUTPUT_FILE"
 }
 
-nmap_scan &
-NMAP_PID=$!
-wait $NMAP_PID
+# Run scans sequentially
+nmap_scan
 echo "Nmap scan completed."
 
-nmap_http_scan &
-NMAP_HTTP_PID=$!
-wait $NMAP_HTTP_PID
+nmap_http_scan
 echo "Nmap HTTP scripts scan completed."
 
-sslscan_scan &
-SSLSCAN_PID=$!
-wait $SSLSCAN_PID
-echo "sslscan completed."
+sslscan_scan
+echo "SSLScan completed."
 
-nikto_scan &
-NIKTO_PID=$!
-wait $NIKTO_PID
+nikto_scan
 echo "Nikto scan completed."
 
 echo "All scans completed for $TARGET. Results saved to $OUTPUT_FILE."
