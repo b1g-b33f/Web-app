@@ -5,7 +5,9 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-TARGET=$(echo $1 | awk -F/ '{print $3}')
+# Extract domain or IP from the URL, remove protocol (http:// or https://)
+TARGET=$(echo $1 | sed -e 's|http[s]*://||' -e 's|/.*||')
+
 PORT=${2:-443}
 
 if [ -z "$TARGET" ]; then
