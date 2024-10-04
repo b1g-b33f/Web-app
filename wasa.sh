@@ -22,23 +22,43 @@ OUTPUT_FILE="${SANITIZED_TARGET}_${DATE}_scan_results.txt"
 echo "Saving results to $OUTPUT_FILE"
 
 nmap_scan() {
-  echo "Starting Nmap scan on $TARGET"
+  echo "### Starting Nmap Scan on $TARGET ###" >> "$OUTPUT_FILE"
+  echo "======================================" >> "$OUTPUT_FILE"
   nmap -Pn -T4 -A -v -p- "$TARGET" >> "$OUTPUT_FILE" 2>&1
+  echo "" >> "$OUTPUT_FILE"
+  echo "### Nmap Scan Completed ###" >> "$OUTPUT_FILE"
+  echo "======================================" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
 }
 
 nmap_http_scan() {
-  echo "Starting Nmap HTTP scripts scan on $TARGET"
+  echo "### Starting Nmap HTTP Scripts Scan on $TARGET ###" >> "$OUTPUT_FILE"
+  echo "==================================================" >> "$OUTPUT_FILE"
   nmap -p "$PORT" --script http-enum,http-methods,http-headers,http-server-header,http-auth,http-robots.txt,http-config-backup "$TARGET" >> "$OUTPUT_FILE" 2>&1
+  echo "" >> "$OUTPUT_FILE"
+  echo "### Nmap HTTP Scripts Scan Completed ###" >> "$OUTPUT_FILE"
+  echo "==================================================" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
 }
 
 sslscan_scan() {
-  echo "Starting sslscan on $TARGET"
+  echo "### Starting SSLScan on $TARGET ###" >> "$OUTPUT_FILE"
+  echo "===================================" >> "$OUTPUT_FILE"
   sslscan "$TARGET" >> "$OUTPUT_FILE" 2>&1
+  echo "" >> "$OUTPUT_FILE"
+  echo "### SSLScan Completed ###" >> "$OUTPUT_FILE"
+  echo "===================================" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
 }
 
 nikto_scan() {
-  echo "Starting Nikto scan on $TARGET"
+  echo "### Starting Nikto Scan on $TARGET ###" >> "$OUTPUT_FILE"
+  echo "=====================================" >> "$OUTPUT_FILE"
   nikto -h "$TARGET" -p "$PORT" >> "$OUTPUT_FILE" 2>&1
+  echo "" >> "$OUTPUT_FILE"
+  echo "### Nikto Scan Completed ###" >> "$OUTPUT_FILE"
+  echo "=====================================" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
 }
 
 nmap_scan &
