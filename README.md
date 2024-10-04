@@ -1,4 +1,4 @@
-# Bash Scripts
+# Usefull web app stuff
 
 ### zone_transfer  
 - strip domain names when performing zone transfer with dig. Output dig axfr to a txt file called dns.txt for it to work.
