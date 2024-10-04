@@ -1,7 +1,7 @@
 # Usefull web app stuff
 
-### OWASP Testing Guide
-- OWASP testing guide xlsx
+### OWASP WSTG
+- OWASP web security testing guide xlsx
   
 ### zone_transfer  
 - strip domain names when performing zone transfer with dig. Output dig axfr to a txt file called dns.txt for it to work.
