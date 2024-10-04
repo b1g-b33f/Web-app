@@ -4,7 +4,7 @@
 - strip domain names when performing zone transfer with dig. Output dig axfr to a txt file called dns.txt for it to work.
 
 
-### wasa.sh
+### wasa
 - enumeration script for when tools are limited
 
 
