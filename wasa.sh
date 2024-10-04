@@ -24,6 +24,11 @@ nmap_scan() {
   nmap -Pn -T4 -A -v -p- "$TARGET" >> "$OUTPUT_FILE" 2>&1
 }
 
+nmap_http_scan() {
+  echo "Starting Nmap HTTP scripts scan on $TARGET"
+  nmap -p "$PORT" --script http-enum,http-methods,http-headers,http-server-header,http-auth,http-robots.txt,http-config-backup "$TARGET" >> "$OUTPUT_FILE" 2>&1
+}
+
 sslscan_scan() {
   echo "Starting sslscan on $TARGET"
   sslscan "$TARGET" >> "$OUTPUT_FILE" 2>&1
@@ -31,13 +36,18 @@ sslscan_scan() {
 
 nikto_scan() {
   echo "Starting Nikto scan on $TARGET"
-  nikto -h "$TARGET" -p "$PORT" -k >> "$OUTPUT_FILE" 2>&1
+  nikto -h "$TARGET" -p "$PORT" >> "$OUTPUT_FILE" 2>&1
 }
 
 nmap_scan &
 NMAP_PID=$!
 wait $NMAP_PID
 echo "Nmap scan completed."
+
+nmap_http_scan &
+NMAP_HTTP_PID=$!
+wait $NMAP_HTTP_PID
+echo "Nmap HTTP scripts scan completed."
 
 sslscan_scan &
 SSLSCAN_PID=$!
