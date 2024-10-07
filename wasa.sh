@@ -52,7 +52,7 @@ sslscan_scan() {
 }
 
 nikto_scan() {
-  echo "### Starting Nikto Scan on $TARGET (Verbose Mode) ###" >> "$OUTPUT_FILE"
+  echo "### Starting Nikto Scan on $TARGET ###" >> "$OUTPUT_FILE"
   echo "===================================================" >> "$OUTPUT_FILE"
   nikto -h "$TARGET" -p "$PORT" -Display V >> "$OUTPUT_FILE" 2>&1
   echo "" >> "$OUTPUT_FILE"
@@ -64,7 +64,7 @@ nikto_scan() {
 curl_headers() {
   echo "### Fetching HTTP Headers using Curl ###" >> "$OUTPUT_FILE"
   echo "=======================================" >> "$OUTPUT_FILE"
-  curl -I -k -L "$1" >> "$OUTPUT_FILE" 2>&1
+  curl --http1.1 -I -k -L -x http://127.0.0.1:8080 "$1" >> "$OUTPUT_FILE" 2>&1
   echo "" >> "$OUTPUT_FILE"
   echo "### HTTP Headers Fetch Completed ###" >> "$OUTPUT_FILE"
   echo "====================================" >> "$OUTPUT_FILE"
