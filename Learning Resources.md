@@ -1,6 +1,7 @@
 ### Learn to code for free
 - Free Code Camp https://www.freecodecamp.org
 - Replit 100 days of Python https://replit.com/learn/100-days-of-python
+- shellscript.sh https://www.shellscript.sh/
 
 ### Web app pentesting free courses
 - PortSwigger Web Security Academy https://portswigger.net/web-security
