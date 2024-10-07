@@ -19,4 +19,4 @@
 - Hack Smarter https://hacksmarter.org/
 
 ### CVE Hunting
-- https://www.youtube.com/watch?v=2VB4Zd5C8N8
+- Tyler Ramsbey tips for finding CVEs https://www.youtube.com/watch?v=2VB4Zd5C8N8
