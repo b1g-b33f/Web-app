@@ -21,3 +21,10 @@
 
 ### CVE Hunting
 - Tyler Ramsbey tips for finding CVEs https://www.youtube.com/watch?v=2VB4Zd5C8N8
+
+### YouTubes
+- Tib3rius https://www.youtube.com/@Tib3rius
+- Rana Khalil https://www.youtube.com/@RanaKhalil101
+
+### Other useful links
+- Home Lab and CTF https://benheater.com/ 
