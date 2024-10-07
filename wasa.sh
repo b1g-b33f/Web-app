@@ -85,7 +85,7 @@ echo "Starting SSLScan on $TARGET"
 sslscan_scan
 echo "SSLScan completed."
 
-echo "Starting Nikto Scan on $TARGET (Verbose Mode)"
+echo "Starting Nikto Scan on $TARGET"
 nikto_scan
 echo "Nikto scan completed."
 
