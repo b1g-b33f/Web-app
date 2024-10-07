@@ -1,5 +1,6 @@
 ### Learn to code for free
-- https://www.freecodecamp.org
+- Free Code Camp https://www.freecodecamp.org
+- Replit 100 days of Python https://replit.com/learn/100-days-of-python
 
 ### Web app pentesting paid courses
 - Hack The Box Academy Certified Bug Bounty Hunter path https://academy.hackthebox.com/path/preview/bug-bounty-hunter
