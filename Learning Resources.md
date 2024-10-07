@@ -4,6 +4,7 @@
 
 ### Web app pentesting free courses
 - PortSwigger Web Security Academy https://portswigger.net/web-security
+- OWASP ZAP Deep Dive https://www.youtube.com/playlist?list=PLz_NN8o2uh8AQ7VyUEN1GCCnpzl5_FaJA
 
 ### Web app pentesting paid courses
 - Hack The Box Academy Certified Bug Bounty Hunter path https://academy.hackthebox.com/path/preview/bug-bounty-hunter
