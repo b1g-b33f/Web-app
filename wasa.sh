@@ -64,7 +64,7 @@ nikto_scan() {
 curl_headers() {
   echo "### Fetching HTTP Headers using Curl ###" >> "$OUTPUT_FILE"
   echo "=======================================" >> "$OUTPUT_FILE"
-  curl -I -k "$1" >> "$OUTPUT_FILE" 2>&1
+  curl -I -k -L "$1" >> "$OUTPUT_FILE" 2>&1
   echo "" >> "$OUTPUT_FILE"
   echo "### HTTP Headers Fetch Completed ###" >> "$OUTPUT_FILE"
   echo "====================================" >> "$OUTPUT_FILE"
