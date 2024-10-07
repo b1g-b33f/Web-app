@@ -14,3 +14,9 @@
 - AppSecExplained https://appsecexplained.gitbook.io/appsecexplained
 - Payloads All The Things https://swisskyrepo.github.io/PayloadsAllTheThings/
 - HackTricks https://book.hacktricks.xyz/pentesting-web/web-vulnerabilities-methodology
+
+### Community
+- Hack Smarter https://hacksmarter.org/
+
+### CVE Hunting
+- https://www.youtube.com/watch?v=2VB4Zd5C8N8
