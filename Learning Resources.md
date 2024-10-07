@@ -18,6 +18,7 @@
 
 ### Community
 - Hack Smarter https://hacksmarter.org/
+- PortSwigger Discord https://discord.gg/portswigger
 
 ### The YouTubes
 - Tib3rius https://www.youtube.com/@Tib3rius
