@@ -17,3 +17,5 @@
 - Comment and uncomment Amass as needed
 
   
+### Learning Resources
+- The best free and paid resources for learning web application security
