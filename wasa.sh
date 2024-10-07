@@ -52,12 +52,22 @@ sslscan_scan() {
 }
 
 nikto_scan() {
-  echo "### Starting Nikto Scan on $TARGET (Including Headers) ###" >> "$OUTPUT_FILE"
-  echo "=========================================================" >> "$OUTPUT_FILE"
-  nikto -h "$TARGET" -p "$PORT" -Display 1 >> "$OUTPUT_FILE" 2>&1
+  echo "### Starting Nikto Scan on $TARGET (Verbose Mode) ###" >> "$OUTPUT_FILE"
+  echo "===================================================" >> "$OUTPUT_FILE"
+  nikto -h "$TARGET" -p "$PORT" -Display V >> "$OUTPUT_FILE" 2>&1
   echo "" >> "$OUTPUT_FILE"
   echo "### Nikto Scan Completed ###" >> "$OUTPUT_FILE"
-  echo "=========================================================" >> "$OUTPUT_FILE"
+  echo "===================================================" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
+}
+
+curl_headers() {
+  echo "### Fetching HTTP Headers using Curl ###" >> "$OUTPUT_FILE"
+  echo "=======================================" >> "$OUTPUT_FILE"
+  curl -I -k "$1" >> "$OUTPUT_FILE" 2>&1
+  echo "" >> "$OUTPUT_FILE"
+  echo "### HTTP Headers Fetch Completed ###" >> "$OUTPUT_FILE"
+  echo "====================================" >> "$OUTPUT_FILE"
   echo "" >> "$OUTPUT_FILE"
 }
 
@@ -75,11 +85,14 @@ echo "Starting SSLScan on $TARGET"
 sslscan_scan
 echo "SSLScan completed."
 
-echo "Starting Nikto Scan on $TARGET (including headers)"
+echo "Starting Nikto Scan on $TARGET (Verbose Mode)"
 nikto_scan
 echo "Nikto scan completed."
+
+echo "Fetching HTTP headers using Curl on $1"
+curl_headers "$1"
+echo "Curl HTTP headers fetch completed."
 
 echo "All scans completed for $TARGET. Results saved to $OUTPUT_FILE."
 
 exit 0
-
