@@ -17,6 +17,11 @@
 ### Expensive but worth it courses
 - Hack The Box Senior Web Penetration Tester Path https://academy.hackthebox.com/path/preview/senior-web-penetration-tester
 
+## Certification
+
+### Affordable
+
+### More Expensive, possbly more resume impact
   
 ## Useful sites methodology, tricks, tips, and payloads
 - AppSecExplained https://appsecexplained.gitbook.io/appsecexplained
