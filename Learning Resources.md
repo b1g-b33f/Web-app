@@ -28,7 +28,7 @@
 - Burp Suite Certified Practitioner https://portswigger.net/web-security/certification
   
 ### More Expensive and possbly more resume impact
-#### Offsec
+#### OffSec
 - OSCP (Not a web app specific cert but king of the resume) https://www.offsec.com/pricing/individual/
 - OSWE
 - Probably would chose BSCP over OSWA so leaving off the list
