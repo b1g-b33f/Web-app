@@ -7,11 +7,11 @@
 - PortSwigger Web Security Academy https://portswigger.net/web-security
 - OWASP ZAP Deep Dive https://www.youtube.com/playlist?list=PLz_NN8o2uh8AQ7VyUEN1GCCnpzl5_FaJA
 
-### Web app pentesting paid courses
+### Web app pentesting affordable paid courses
 - Hack The Box Academy Certified Bug Bounty Hunter path https://academy.hackthebox.com/path/preview/bug-bounty-hunter
 - TCM Academy Practical Bug Bounty, Practical Web Hacking, Practical API Hacking https://academy.tcm-sec.com
 
-### Useful sites
+### Useful sites methodology, tricks, tips, and payloads
 - AppSecExplained https://appsecexplained.gitbook.io/appsecexplained
 - Payloads All The Things https://swisskyrepo.github.io/PayloadsAllTheThings/
 - HackTricks https://book.hacktricks.xyz/pentesting-web/web-vulnerabilities-methodology
