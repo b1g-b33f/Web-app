@@ -1,5 +1,8 @@
 # Usefull web app stuff
 
+### Learning Resources
+- The best free and paid resources for learning web application security
+
 ### OWASP WSTG
 - OWASP web security testing guide xlsx
   
@@ -16,6 +19,3 @@
 - Just peeking
 - Comment and uncomment Amass as needed
 
-  
-### Learning Resources
-- The best free and paid resources for learning web application security
