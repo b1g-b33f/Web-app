@@ -1,11 +1,12 @@
 # Usefull web app stuff
 
-### Learning Resources
+## Learning Resources
 - The best free and paid resources for learning web application security
 
-### OWASP WSTG
+## OWASP WSTG
 - OWASP web security testing guide xlsx
-  
+
+## Useful Scripts
 ### zone_transfer  
 - strip domain names when performing zone transfer with dig. Output dig axfr to a txt file called dns.txt for it to work.
 
