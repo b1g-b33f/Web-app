@@ -3,19 +3,22 @@
 - Replit 100 days of Python https://replit.com/learn/100-days-of-python
 - shellscript.sh https://www.shellscript.sh/
 
-
+  
 ## Training Material
 
 ### Web app pentesting free courses
 - PortSwigger Web Security Academy https://portswigger.net/web-security
 - OWASP ZAP Deep Dive https://www.youtube.com/playlist?list=PLz_NN8o2uh8AQ7VyUEN1GCCnpzl5_FaJA
 
+
 ### Web app pentesting affordable paid courses
 - Hack The Box Academy Certified Bug Bounty Hunter Path https://academy.hackthebox.com/path/preview/bug-bounty-hunter
 - TCM Academy Practical Bug Bounty, Practical Web Hacking, Practical API Hacking https://academy.tcm-sec.com
 
+
 ### Expensive but worth it courses
 - Hack The Box Senior Web Penetration Tester Path https://academy.hackthebox.com/path/preview/senior-web-penetration-tester
+
 
 ## Certifications
 
@@ -26,12 +29,13 @@
 
 ### Affordable and possibly more resume impact
 - Burp Suite Certified Practitioner https://portswigger.net/web-security/certification
-  
+ 
 ### More Expensive and possbly more resume impact
 #### OffSec
 - OSCP (Not a web app specific cert but king of the resume) https://www.offsec.com/pricing/individual/
 - OSWE
 - Probably would chose BSCP over OSWA so leaving off the list
+
   
 ## Useful sites methodology, tricks, tips, and payloads
 - AppSecExplained https://appsecexplained.gitbook.io/appsecexplained
@@ -49,6 +53,10 @@
 - Rana Khalil https://www.youtube.com/@RanaKhalil101
 - Tyler Ramsbey https://www.youtube.com/@TylerRamsbey
 
+  
+## Reading
+- This and older book but the methodology and explanations of how all components of a web application work are great. If you were doing the Bug Bounty Hunter Path from HTB and PortSwigger you can easily skip this book but it's still worth the mention https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470
 
+  
 ## Other useful links
 - Home Lab and CTF https://benheater.com/ 
