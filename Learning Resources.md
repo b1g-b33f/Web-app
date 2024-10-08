@@ -17,11 +17,21 @@
 ### Expensive but worth it courses
 - Hack The Box Senior Web Penetration Tester Path https://academy.hackthebox.com/path/preview/senior-web-penetration-tester
 
-## Certification
+## Certifications
 
-### Affordable
+### Affordable and possibly less resume impact
+- Hack the Box Certified Bug Bounty Hunter https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
+- TCM Security Practical Junior Web Tester https://certifications.tcm-sec.com/pjwt/
+- TCM Security Practical Web Penetration Tester https://certifications.tcm-sec.com/pwpt/
 
-### More Expensive, possbly more resume impact
+### Affordable and possibly more resume impact
+- Burp Suite Certified Practitioner https://portswigger.net/web-security/certification
+  
+### More Expensive and possbly more resume impact
+#### Offsec
+- OSCP (Not a web app specific cert but king of the resume) https://www.offsec.com/pricing/individual/
+- OSWE
+- Probably would chose BSCP over OSWA so leaving off the list
   
 ## Useful sites methodology, tricks, tips, and payloads
 - AppSecExplained https://appsecexplained.gitbook.io/appsecexplained
