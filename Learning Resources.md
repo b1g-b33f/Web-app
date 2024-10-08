@@ -17,18 +17,18 @@
 ### Expensive but worth it courses
 - Hack The Box Senior Web Penetration Tester Path https://academy.hackthebox.com/path/preview/senior-web-penetration-tester
 
-
+  
 ## Useful sites methodology, tricks, tips, and payloads
 - AppSecExplained https://appsecexplained.gitbook.io/appsecexplained
 - Payloads All The Things https://swisskyrepo.github.io/PayloadsAllTheThings/
 - HackTricks https://book.hacktricks.xyz/pentesting-web/web-vulnerabilities-methodology
 
-
+  
 ## Community
 - Hack Smarter https://hacksmarter.org/
 - PortSwigger Discord https://discord.gg/portswigger
 
-
+  
 ## The YouTubes - Active, informational, and minimal click bait
 - Tib3rius https://www.youtube.com/@Tib3rius
 - Rana Khalil https://www.youtube.com/@RanaKhalil101
