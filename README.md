@@ -1,6 +1,6 @@
 # Usefull web app stuff
 
-## Learning Resources
+## Beginner Resources
 - The best free and paid resources for learning web application security
 
 ## OWASP WSTG
