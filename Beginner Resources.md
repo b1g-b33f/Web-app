@@ -16,7 +16,7 @@
 - TCM Academy Practical Bug Bounty, Practical Web Hacking, Practical API Hacking https://academy.tcm-sec.com
 
 
-### Web app pentesting xpensive but worth it courses
+### Web app pentesting expensive but worth it courses
 - Hack The Box Senior Web Penetration Tester Path https://academy.hackthebox.com/path/preview/senior-web-penetration-tester
 
 
