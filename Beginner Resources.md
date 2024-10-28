@@ -52,6 +52,7 @@
 - Tib3rius https://www.youtube.com/@Tib3rius
 - Rana Khalil https://www.youtube.com/@RanaKhalil101
 - Tyler Ramsbey https://www.youtube.com/@TylerRamsbey
+- NahamSec https://www.youtube.com/@NahamSec
 
   
 ## Reading
