@@ -57,6 +57,7 @@
   
 ## Reading
 - This and older book but the methodology and explanations of how all components of a web application work are great. If you were doing the Bug Bounty Hunter Path from HTB and PortSwigger you can easily skip this book but it's still worth the mention https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470
+- HTTP headers https://www.darkrelay.com/post/http-security-headers
 
   
 ## Other useful links
