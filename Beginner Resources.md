@@ -74,4 +74,4 @@ Courses not listed in training because I think the cheaper courses listed are ju
 ## Other useful links
 - Home Lab and CTF https://benheater.com/
 - I would consider the penetration tester path from Hack The Box Academy useful to anyone interested in web application security just for the wealth of knowledge it contains https://academy.hackthebox.com/path/preview/penetration-tester
-- Burpsuite is great, but the free version has it's limitations for the free version. For unthrottled fuzzing and vulnerability scanning OWASP Zap is an amazing free alternative https://www.zaproxy.org/
+- Burpsuite Pro is great, but the free version has it's limitations. For unthrottled fuzzing and vulnerability scanning OWASP Zap is an amazing free alternative https://www.zaproxy.org/
