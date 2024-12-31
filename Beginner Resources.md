@@ -26,6 +26,7 @@ The pathway I laid out above is just a suggestion for someone caught up in analy
 ### Free API training
 - [Postman Academy](https://academy.postman.com/)
 - [Postman Student Certification](https://academy.postman.com/path/postman-api-fundamentals-student-expert)
+- [APIsec University](https://www.apisecuniversity.com/)
 
 ### Web app pentesting affordable paid courses
 - [TCM Academy Practical Bug Bounty, Practical Web Hacking, Practical API Hacking](https://academy.tcm-sec.com)
