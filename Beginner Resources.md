@@ -14,7 +14,7 @@ Finally getting to the topic of web app there are a few places we could start bu
 
 Practicing your craft is a must. Bug bounty or setting up your own labs are great options, but I must mention [Hack The Box](https://www.hackthebox.com/) and [TryHackMe](https://tryhackme.com) I prefer Hack The Box but both are great. TryHackMe also just released a web app pentesting path, but I've left it off the list until I can actually review it.
 
-The pathway I laid out above is just a suggestion for someone caught up in analysis paralysis. The rest of the resources laid out here will be things that I have found useful and you can pick and choose at your own discretion. Another thing to consider is that networking is very helpful for finding gainful employment (people not TCP/IP). LinkedIn, Discord, and local meetups/conventions can help in this aspect but it's up to you to play well with others.
+The pathway I laid out above is just a suggestion for someone caught up in analysis paralysis. The rest of the resources laid out here will be things that I have found useful and you can pick and choose at your own discretion. Another thing to consider is that networking is very helpful for finding gainful employment (people networking not TCP/IP). LinkedIn, Discord, and local meetups/conventions can help in this aspect but it's up to you to play well with others.
 
 
 ## Web app pentesting training Material
