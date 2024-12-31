@@ -10,6 +10,9 @@
 - PortSwigger Web Security Academy https://portswigger.net/web-security
 - OWASP ZAP Deep Dive https://www.youtube.com/playlist?list=PLz_NN8o2uh8AQ7VyUEN1GCCnpzl5_FaJA
 
+### Free API training
+- Postman Academy https://academy.postman.com/
+- Postman Student Certification https://academy.postman.com/path/postman-api-fundamentals-student-expert
 
 ### Web app pentesting affordable paid courses
 - Hack The Box Academy Certified Bug Bounty Hunter Path https://academy.hackthebox.com/path/preview/bug-bounty-hunter
