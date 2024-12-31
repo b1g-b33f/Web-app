@@ -65,6 +65,7 @@ A great way to meet people in the industry, find mentorship, and share resources
 - [Hack Smarter](https://hacksmarter.org/) Free mentoring, great Discord community.
 - [PortSwigger Discord](https://discord.gg/portswigger) Technical Burp Suite and App sec help. Community seems to be growing a bit as well.
 - [TCM Security Discord](https://discord.gg/tcm) Good community but large Discord.
+- Hack the Box and TryHackme have Discords but they are too large and noisy for me. If I need help with Hack the Box I prefer the [forums](https://forum.hackthebox.com/)
 
 
 ## The YouTubes - Active, informational, and minimal click bait
