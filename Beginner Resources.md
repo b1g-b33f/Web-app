@@ -1,4 +1,8 @@
-## Learn to code for free
+## Learn the basics for free (This is for ground zero, no IT experience)
+- TCM free tier Help Desk, Soft skills, programming, Linux https://tcm-sec.com/free-tier-launch/
+- Basics of hardware/operating systems (A+), networking (Network+), and cybersecurity (Security+). Take the certs if you want but the learning is all free here https://www.youtube.com/professormesser
+
+## Learn to code for free (All optional but very helpful)
 - Free Code Camp https://www.freecodecamp.org
 - Replit 100 days of Python https://replit.com/learn/100-days-of-python
 - shellscript.sh https://www.shellscript.sh/
@@ -8,7 +12,6 @@
 
 ### Web app pentesting free courses
 - PortSwigger Web Security Academy https://portswigger.net/web-security
-- OWASP ZAP Deep Dive https://www.youtube.com/playlist?list=PLz_NN8o2uh8AQ7VyUEN1GCCnpzl5_FaJA
 
 ### Free API training
 - Postman Academy https://academy.postman.com/
