@@ -40,7 +40,7 @@
 
  
 ### Expensive and possbly more resume impact 
-Courses not listed in training because I think the cheaper coarses listed are just as good if not better.
+Courses not listed in training because I think the cheaper courses listed are just as good if not better.
 - OSCP (Not a web app specific cert but king of the resume) https://www.offsec.com/courses/pen-200/
 - OSWA https://www.offsec.com/courses/web-200/
 - OSWE https://www.offsec.com/courses/web-300/
