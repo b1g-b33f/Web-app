@@ -1,14 +1,16 @@
-## Learn the basics for free (This is for ground zero, no IT experience)
+## Foundationals
+
+### Learn the basics for free (This is for ground zero, no IT experience)
 - TCM free tier Help Desk, Soft skills, programming, Linux https://tcm-sec.com/free-tier-launch/
 - Basics of hardware/operating systems (A+), networking (Network+), and cybersecurity (Security+). Take the certs if you want but the learning is all free here https://www.youtube.com/professormesser
 
-## Learn to code for free (All optional but very helpful)
+### Learn to code for free (All optional but very helpful)
 - Free Code Camp https://www.freecodecamp.org
 - Replit 100 days of Python https://replit.com/learn/100-days-of-python
 - shellscript.sh https://www.shellscript.sh/
 
   
-## Training Material
+## Web app pentesting training Material
 
 ### Web app pentesting free courses
 - PortSwigger Web Security Academy https://portswigger.net/web-security
@@ -70,4 +72,5 @@
 
   
 ## Other useful links
-- Home Lab and CTF https://benheater.com/ 
+- Home Lab and CTF https://benheater.com/
+- I would consider the penetration tester path from Hack The Box Academy useful to anyone interested in web application security just for the wealth of knowledge it contains https://academy.hackthebox.com/path/preview/penetration-tester
