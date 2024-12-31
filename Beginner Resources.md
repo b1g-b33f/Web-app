@@ -40,10 +40,10 @@
 
  
 ### More Expensive and possbly more resume impact
-#### OffSec
-- OSCP (Not a web app specific cert but king of the resume) https://www.offsec.com/pricing/individual/
-- OSWA
-- OSWE
+
+- OSCP (Not a web app specific cert but king of the resume) https://www.offsec.com/courses/pen-200/
+- OSWA https://www.offsec.com/courses/web-200/
+- OSWE https://www.offsec.com/courses/web-300/
 
   
 ## Useful sites methodology, tricks, tips, and payloads
