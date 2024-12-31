@@ -77,7 +77,7 @@ A great way to meet people in the industry, find mentorship, and share resources
 
 ## Reading
 List to be updated as I find helpful books and blog posts.
-- This and older book but the methodology and explanations of how all components of a web application work are great. If you were doing the Bug Bounty Hunter Path from HTB and PortSwigger you can easily skip this book but it's still worth the mention https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470
+- [Web Application Hackers Handbook](https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470) This and older book but the methodology and explanations of how all components of a web application work are great. If you were doing the Bug Bounty Hunter Path from HTB and PortSwigger you can easily skip this book but it's still worth the mention.
 - [Red Team Field Manual](https://www.amazon.com/RTFM-Red-Team-Field-Manual/dp/1075091837/ref=pd_lpo_d_sccl_1/134-0980587-1022640?pd_rd_w=H78kq&content-id=amzn1.sym.4c8c52db-06f8-4e42-8e56-912796f2ea6c&pf_rd_p=4c8c52db-06f8-4e42-8e56-912796f2ea6c&pf_rd_r=TR5DSKBXJ789NW3JNWS4&pd_rd_wg=fD2mg&pd_rd_r=d4e00e87-3da5-4853-9b2b-de69622ab5c6&pd_rd_i=1075091837&psc=1) Not web app but contains enough useful information and just a cool book.
 - HTTP headers https://www.darkrelay.com/post/http-security-headers
 
