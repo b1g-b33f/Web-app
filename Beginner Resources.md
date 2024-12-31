@@ -27,17 +27,18 @@
 
 ### Affordable and possibly less resume impact
 - Hack the Box Certified Bug Bounty Hunter https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter
-- TCM Security Practical Junior Web Tester https://certifications.tcm-sec.com/pjwt/
-- TCM Security Practical Web Penetration Tester https://certifications.tcm-sec.com/pwpt/
+- TCM Security Practical Web Pentest Associate https://certifications.tcm-sec.com/pwpa/
+- TCM Security Practical Web Pentest Professional https://certifications.tcm-sec.com/pwpp/
 
 ### Affordable and possibly more resume impact
 - Burp Suite Certified Practitioner https://portswigger.net/web-security/certification
+
  
 ### More Expensive and possbly more resume impact
 #### OffSec
 - OSCP (Not a web app specific cert but king of the resume) https://www.offsec.com/pricing/individual/
+- OSWA
 - OSWE
-- Probably would chose BSCP over OSWA so leaving off the list
 
   
 ## Useful sites methodology, tricks, tips, and payloads
@@ -49,6 +50,7 @@
 ## Community
 - Hack Smarter https://hacksmarter.org/
 - PortSwigger Discord https://discord.gg/portswigger
+- TCM Security Discord https://discord.gg/tcm
 
   
 ## The YouTubes - Active, informational, and minimal click bait
@@ -56,6 +58,7 @@
 - Rana Khalil https://www.youtube.com/@RanaKhalil101
 - Tyler Ramsbey https://www.youtube.com/@TylerRamsbey
 - NahamSec https://www.youtube.com/@NahamSec
+- TCM Security https://www.youtube.com/c/thecybermentor
 
   
 ## Reading
