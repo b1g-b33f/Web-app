@@ -86,4 +86,4 @@ List to be updated as I find helpful books and blog posts.
 ## Other useful links
 - Home Lab and CTF https://benheater.com/
 	- Ben's site can be very useful through your entire journey. Explore his material well, do not skip. If you decided on going the route of setting up your own home lab then extra don't skip.
-- Burpsuite Pro is great, but the free version has it's limitations. For unthrottled fuzzing and vulnerability scanning OWASP Zap is an amazing free alternative https://www.zaproxy.org/ I've linked this here because while Hack the Box Academy covers ZAP, many other courses don't.
+- Burpsuite Pro is great, but the free version has it's limitations. For unthrottled fuzzing and vulnerability scanning OWASP ZAP is an amazing free alternative https://www.zaproxy.org/ I've linked this here because while Hack the Box Academy covers ZAP, many other courses don't.
