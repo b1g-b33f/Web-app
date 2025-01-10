@@ -23,7 +23,7 @@ The pathway I laid out above is just a suggestion for someone caught up in analy
 
 ### Web app pentesting free courses
 - [PortSwigger Web Security Academy](https://portswigger.net/web-security)
-	- I recommend the bug bounty hunter path for beginners for the structure. PortSwigger is just as good and in some ways better. The BSCP certification may also be the best bang for your buck as a web app resume cert.
+	- I recommend the bug bounty hunter path for beginners for the structure and foundational concepts. PortSwigger is just as good and in some ways better. The BSCP certification may also be the best bang for your buck as a web app resume cert.
 
 ### Free API training
 - [Postman Academy](https://academy.postman.com/)
@@ -46,7 +46,7 @@ The pathway I laid out above is just a suggestion for someone caught up in analy
 - [TCM Security Practical Web Pentest Associate](https://certifications.tcm-sec.com/pwpa/)
 - [TCM Security Practical Web Pentest Professional](https://certifications.tcm-sec.com/pwpp/)
 
-### Affordable and possibly more resume impact
+### Affordable and possibly more resume impact (recommended)
 - [Burp Suite Certified Practitioner](https://portswigger.net/web-security/certification)
 
 ### Expensive and possibly more resume impact 
