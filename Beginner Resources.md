@@ -31,7 +31,7 @@ The pathway I laid out above is just a suggestion for someone caught up in analy
 - [APIsec University](https://www.apisecuniversity.com/)
 
 ### Web app pentesting affordable paid courses
-- [TCM Academy Practical Bug Bounty, Practical Web Hacking, Practical API Hacking](https://academy.tcm-sec.com)
+- [TCM Academy Practical Bug Bounty, Practical Web Hacking, Practical API Hacking, Advanced Web Hacking](https://academy.tcm-sec.com)
 	- Also great material here and you'll find some vulnerabilities covered here that aren't in the bug bounty hunter path. If you do well with video learning these courses are the way.
 
 
