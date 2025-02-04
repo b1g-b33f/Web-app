@@ -4,7 +4,7 @@
 - The best free and paid resources for learning web application security
 
 ## OWASP WSTG
-- OWASP web security testing guide xlsx
+- OWASP web security testing guide xlsx [[OWASP_WSTG_Checklist.xlsx]]
 
 ## Useful Scripts
 ### zone_transfer  
