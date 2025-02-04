@@ -20,3 +20,10 @@
 - Just peeking
 - Comment and uncomment Amass as needed
 
+## Wordlists
+
+### 25 LFI Paramters
+- LFI paramters short list
+
+### Pega Parameters
+- List of Pega paramters
