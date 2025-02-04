@@ -23,4 +23,4 @@
 - LFI paramters short list
 
 [Pega Parameters](https://github.com/b1g-b33f/Web-app/blob/main/pega-parameters.txt)
-- List of Pega paramters
+- List of Pega parameters
