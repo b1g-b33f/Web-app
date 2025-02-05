@@ -24,3 +24,6 @@
 
 [Pega Parameters](https://github.com/b1g-b33f/Web-app/blob/main/pega-parameters.txt)
 - List of Pega parameters
+
+## Payloads
+[xxe in svg](https://github.com/b1g-b33f/Web-app/blob/main/xxe.svg)
