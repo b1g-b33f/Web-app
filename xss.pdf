@@ -12,23 +12,18 @@ endobj
 endobj
 
 4 0 obj
-<</Length 44>>
+<</Length 0>>
 stream
-BT
-/F1 24 Tf
-100 700 Td
-(Executing Action...) Tj
-ET
+% Empty page content, no text
 endstream
 endobj
 
 5 0 obj
 <</S /JavaScript /JS (
-    var encodedData = 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==';  // Base64-encoded URL
-    var decodedData = atob(encodedData);  // Decode the Base64 string
-    app.launchURL(decodedData, true);  // Open the URL in the default browser
+    app.launchURL('https://www.google.com', true);  // Open Google
 )>>
 endobj
 
 trailer
 <</Root 1 0 R /Size 6>>
+
