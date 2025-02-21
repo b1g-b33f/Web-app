@@ -8,7 +8,7 @@ endobj
 endobj
 
 3 0 obj
-<</Type /Page /Parent 2 0 R /Resources <<>> /MediaBox [0 0 612 792] /Contents 4 0 R>>
+<</Type /Page /Parent 2 0 R /Resources <<>> /MediaBox [0 0 612 792] /Contents 4 0 R /OpenAction 5 0 R>>
 endobj
 
 4 0 obj
@@ -17,16 +17,16 @@ stream
 BT
 /F1 24 Tf
 100 700 Td
-(Click to execute action) Tj
+(Click here to execute action!) Tj
 ET
 endstream
 endobj
 
 5 0 obj
 <</S /JavaScript /JS (
-    var encodedData = 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==';  
-    var decodedData = atob(encodedData); 
-    app.launchURL(decodedData, true); 
+    var encodedData = 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==';  // Base64-encoded URL
+    var decodedData = atob(encodedData);  // Decode the Base64 string
+    app.launchURL(decodedData, true);  // Open the URL in the default browser
 )>>
 endobj
 
