@@ -1,29 +1,13 @@
 %PDF-1.7
 1 0 obj
-<</Type /Catalog /Pages 2 0 R>>
+<</Pages 1 0 R /OpenAction 2 0 R>>
 endobj
 
 2 0 obj
-<</Type /Pages /Count 1 /Kids [3 0 R]>>
-endobj
-
-3 0 obj
-<</Type /Page /Parent 2 0 R /Resources <<>> /MediaBox [0 0 612 792] /Contents 4 0 R /OpenAction 5 0 R>>
-endobj
-
-4 0 obj
-<</Length 0>>
-stream
-% Empty page content, no text
-endstream
-endobj
-
-5 0 obj
-<</S /JavaScript /JS (
-    app.launchURL('https://www.google.com', true);  // Open Google
-)>>
+<</S /JavaScript /JS (app.launchURL('https://www.google.com', true);)>> 
 endobj
 
 trailer
-<</Root 1 0 R /Size 6>>
+<</Root 1 0 R>>
+
 
