@@ -1,7 +1,7 @@
 # Usefull web app stuff
 
-## OWASP WSTG
-- [OWASP web security testing guide xlsx](https://github.com/b1g-b33f/Web-app/blob/main/OWASP_WSTG_Checklist.xlsx) 
+## OWASP Checklist
+- [OWASP WSTG Testing guide](https://github.com/b1g-b33f/Web-app/blob/main/owasp_checklist.md) 
 
 ## Useful Scripts
 [zone_transfer](https://github.com/b1g-b33f/Web-app/blob/main/zone_transfer.sh)  
