@@ -8,7 +8,7 @@
 - strip domain names when performing zone transfer with dig. Output dig axfr to a txt file called dns.txt for it to work.
 
 [wasa](https://github.com/b1g-b33f/Web-app/blob/main/wasa.sh)
-- minimalist bash script for web application security assessment enumeration.
+- Minimalist bash script for web application security assessment enumeration.
 
 [file_ext_bypass](https://github.com/b1g-b33f/Web-app/blob/main/file_ext_bypass.sh)
 - Creates worlist for file extension bypass fuzzing. Change extensions as needed.
