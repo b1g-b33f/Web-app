@@ -17,14 +17,26 @@ fi
 
 DATE=$(date +"%Y-%m-%d")
 SANITIZED_TARGET=$(echo "$TARGET" | sed 's/[^a-zA-Z0-9]/_/g')
-OUTPUT_FILE="${SANITIZED_TARGET}_${DATE}_scan_results.txt"
+
+# Prompt for the output file destination
+read -p "Enter the destination for the output file (default: ${SANITIZED_TARGET}_${DATE}_scan_results.txt): " OUTPUT_DIR
+OUTPUT_DIR=${OUTPUT_DIR:-"."}  # Default to current directory if not provided
+
+# Ensure the output directory exists
+if [ ! -d "$OUTPUT_DIR" ]; then
+  echo "The specified directory does not exist. Creating directory $OUTPUT_DIR."
+  mkdir -p "$OUTPUT_DIR"
+fi
+
+# Construct the output file path
+OUTPUT_FILE="$OUTPUT_DIR/${SANITIZED_TARGET}_${DATE}_scan_results.txt"
 
 echo "Saving results to $OUTPUT_FILE"
 
 nmap_scan() {
   echo "### Starting Nmap Scan on $TARGET ###" >> "$OUTPUT_FILE"
   echo "======================================" >> "$OUTPUT_FILE"
-  nmap -Pn -T4 -A -v -p- "$TARGET" >> "$OUTPUT_FILE" 2>&1
+  nmap -Pn -T4 -A -p- "$TARGET" >> "$OUTPUT_FILE" 2>&1
   echo "" >> "$OUTPUT_FILE"
   echo "### Nmap Scan Completed ###" >> "$OUTPUT_FILE"
   echo "======================================" >> "$OUTPUT_FILE"
@@ -54,20 +66,20 @@ sslscan_scan() {
 nikto_scan() {
   echo "### Starting Nikto Scan on $TARGET ###" >> "$OUTPUT_FILE"
   echo "===================================================" >> "$OUTPUT_FILE"
-  nikto -h "$TARGET" -p "$PORT" -Display V >> "$OUTPUT_FILE" 2>&1
+  nikto -h "$TARGET" -p "$PORT" >> "$OUTPUT_FILE" 2>&1
   echo "" >> "$OUTPUT_FILE"
   echo "### Nikto Scan Completed ###" >> "$OUTPUT_FILE"
   echo "===================================================" >> "$OUTPUT_FILE"
   echo "" >> "$OUTPUT_FILE"
 }
 
-curl_headers() {
-  echo "### Fetching HTTP Headers using Curl ###" >> "$OUTPUT_FILE"
-  echo "=======================================" >> "$OUTPUT_FILE"
-  curl --http1.1 -I -k -L -x http://127.0.0.1:8080 "$1" >> "$OUTPUT_FILE" 2>&1
+whatweb_scan() {
+  echo "### Starting WhatWeb Scan on $TARGET ###" >> "$OUTPUT_FILE"
+  echo "========================================" >> "$OUTPUT_FILE"
+  whatweb -a 3 -v "$1" >> "$OUTPUT_FILE" 2>&1
   echo "" >> "$OUTPUT_FILE"
-  echo "### HTTP Headers Fetch Completed ###" >> "$OUTPUT_FILE"
-  echo "====================================" >> "$OUTPUT_FILE"
+  echo "### WhatWeb Scan Completed ###" >> "$OUTPUT_FILE"
+  echo "========================================" >> "$OUTPUT_FILE"
   echo "" >> "$OUTPUT_FILE"
 }
 
@@ -89,10 +101,11 @@ echo "Starting Nikto Scan on $TARGET"
 nikto_scan
 echo "Nikto scan completed."
 
-echo "Fetching HTTP headers using Curl on $1"
-curl_headers "$1"
-echo "Curl HTTP headers fetch completed."
+echo "Starting WhatWeb Scan on $1"
+whatweb_scan "$1"
+echo "WhatWeb scan completed."
 
 echo "All scans completed for $TARGET. Results saved to $OUTPUT_FILE."
 
 exit 0
+
