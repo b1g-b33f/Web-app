@@ -53,13 +53,13 @@ nmap_http_scan() {
   echo "" >> "$OUTPUT_FILE"
 }
 
-sslscan_scan() {
-  echo "### Starting SSLScan on $TARGET ###" >> "$OUTPUT_FILE"
-  echo "===================================" >> "$OUTPUT_FILE"
-  sslscan "$TARGET" >> "$OUTPUT_FILE" 2>&1
+testssl_scan() {
+  echo "### Starting testssl.sh Scan on $TARGET ###" >> "$OUTPUT_FILE"
+  echo "======================================" >> "$OUTPUT_FILE"
+  /home/kali/tools/testssl.sh/testssl.sh --quiet --report="$OUTPUT_FILE" --timeout 10 "$TARGET" >> "$OUTPUT_FILE" 2>&1
   echo "" >> "$OUTPUT_FILE"
-  echo "### SSLScan Completed ###" >> "$OUTPUT_FILE"
-  echo "===================================" >> "$OUTPUT_FILE"
+  echo "### testssl.sh Scan Completed ###" >> "$OUTPUT_FILE"
+  echo "======================================" >> "$OUTPUT_FILE"
   echo "" >> "$OUTPUT_FILE"
 }
 
@@ -84,12 +84,12 @@ whatweb_scan() {
 }
 
 wafw00f_scan() {
-  echo "### Starting WAFW00F Scan on $TARGET ###" >> "$OUTPUT_FILE"
-  echo "======================================" >> "$OUTPUT_FILE"
+  echo "### Starting wafw00f Scan on $TARGET ###" >> "$OUTPUT_FILE"
+  echo "=====================================" >> "$OUTPUT_FILE"
   wafw00f "$TARGET" >> "$OUTPUT_FILE" 2>&1
   echo "" >> "$OUTPUT_FILE"
-  echo "### WAFW00F Scan Completed ###" >> "$OUTPUT_FILE"
-  echo "======================================" >> "$OUTPUT_FILE"
+  echo "### wafw00f Scan Completed ###" >> "$OUTPUT_FILE"
+  echo "=====================================" >> "$OUTPUT_FILE"
   echo "" >> "$OUTPUT_FILE"
 }
 
@@ -103,9 +103,9 @@ echo "Starting Nmap HTTP Scripts Scan on $TARGET"
 nmap_http_scan
 echo "Nmap HTTP scripts scan completed."
 
-echo "Starting SSLScan on $TARGET"
-sslscan_scan
-echo "SSLScan completed."
+echo "Starting testssl.sh Scan on $TARGET"
+testssl_scan
+echo "testssl.sh scan completed."
 
 echo "Starting Nikto Scan on $TARGET"
 nikto_scan
@@ -115,12 +115,10 @@ echo "Starting WhatWeb Scan on $1"
 whatweb_scan "$1"
 echo "WhatWeb scan completed."
 
-echo "Starting WAFW00F Scan on $TARGET"
+echo "Starting wafw00f Scan on $TARGET"
 wafw00f_scan
-echo "WAFW00F scan completed."
+echo "wafw00f scan completed."
 
 echo "All scans completed for $TARGET. Results saved to $OUTPUT_FILE."
 
 exit 0
-
-
