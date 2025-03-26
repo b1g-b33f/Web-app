@@ -83,6 +83,16 @@ whatweb_scan() {
   echo "" >> "$OUTPUT_FILE"
 }
 
+wafw00f_scan() {
+  echo "### Starting WAFW00F Scan on $TARGET ###" >> "$OUTPUT_FILE"
+  echo "======================================" >> "$OUTPUT_FILE"
+  wafw00f "$TARGET" >> "$OUTPUT_FILE" 2>&1
+  echo "" >> "$OUTPUT_FILE"
+  echo "### WAFW00F Scan Completed ###" >> "$OUTPUT_FILE"
+  echo "======================================" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
+}
+
 # Run scans sequentially with real-time updates
 echo "Starting all scans for $TARGET"
 echo "Starting Nmap Scan on $TARGET"
@@ -105,7 +115,12 @@ echo "Starting WhatWeb Scan on $1"
 whatweb_scan "$1"
 echo "WhatWeb scan completed."
 
+echo "Starting WAFW00F Scan on $TARGET"
+wafw00f_scan
+echo "WAFW00F scan completed."
+
 echo "All scans completed for $TARGET. Results saved to $OUTPUT_FILE."
 
 exit 0
+
 
