@@ -20,7 +20,7 @@ SANITIZED_TARGET=$(echo "$TARGET" | sed 's/[^a-zA-Z0-9]/_/g')
 
 # Prompt for the output file destination
 read -p "Enter the destination for the output file (default: ${SANITIZED_TARGET}_${DATE}_scan_results.txt): " OUTPUT_DIR
-OUTPUT_DIR=${OUTPUT_DIR:-"."}  # Default to current directory if not provided
+OUTPUT_DIR=${OUTPUT_DIR:-"."}
 
 # Ensure the output directory exists
 if [ ! -d "$OUTPUT_DIR" ]; then
@@ -37,87 +37,79 @@ nmap_scan() {
   echo "### Starting Nmap Scan on $TARGET ###" >> "$OUTPUT_FILE"
   echo "======================================" >> "$OUTPUT_FILE"
   nmap -Pn -T4 -A -p- "$TARGET" >> "$OUTPUT_FILE" 2>&1
-  echo "" >> "$OUTPUT_FILE"
-  echo "### Nmap Scan Completed ###" >> "$OUTPUT_FILE"
-  echo "======================================" >> "$OUTPUT_FILE"
-  echo "" >> "$OUTPUT_FILE"
+  echo -e "\n### Nmap Scan Completed ###\n" >> "$OUTPUT_FILE"
 }
 
 nmap_http_scan() {
   echo "### Starting Nmap HTTP Scripts Scan on $TARGET ###" >> "$OUTPUT_FILE"
   echo "==================================================" >> "$OUTPUT_FILE"
   nmap -p "$PORT" --script http-enum,http-methods,http-headers,http-server-header,http-auth,http-robots.txt,http-config-backup "$TARGET" >> "$OUTPUT_FILE" 2>&1
-  echo "" >> "$OUTPUT_FILE"
-  echo "### Nmap HTTP Scripts Scan Completed ###" >> "$OUTPUT_FILE"
-  echo "==================================================" >> "$OUTPUT_FILE"
-  echo "" >> "$OUTPUT_FILE"
+  echo -e "\n### Nmap HTTP Scripts Scan Completed ###\n" >> "$OUTPUT_FILE"
 }
 
-testssl_scan() {
-  echo "### Starting testssl.sh Scan on $TARGET ###" >> "$OUTPUT_FILE"
+sslscan_scan() {
+  echo "### Starting sslscan on $TARGET:$PORT ###" >> "$OUTPUT_FILE"
   echo "======================================" >> "$OUTPUT_FILE"
-  /home/kali/tools/testssl.sh/testssl.sh --quiet --report="$OUTPUT_FILE" --timeout 10 "$TARGET" >> "$OUTPUT_FILE" 2>&1
-  echo "" >> "$OUTPUT_FILE"
-  echo "### testssl.sh Scan Completed ###" >> "$OUTPUT_FILE"
-  echo "======================================" >> "$OUTPUT_FILE"
-  echo "" >> "$OUTPUT_FILE"
+  sslscan "$TARGET:$PORT" >> "$OUTPUT_FILE" 2>&1
+  echo -e "\n### sslscan Completed ###\n" >> "$OUTPUT_FILE"
 }
 
 nikto_scan() {
   echo "### Starting Nikto Scan on $TARGET ###" >> "$OUTPUT_FILE"
   echo "===================================================" >> "$OUTPUT_FILE"
   nikto -h "$TARGET" -p "$PORT" >> "$OUTPUT_FILE" 2>&1
-  echo "" >> "$OUTPUT_FILE"
-  echo "### Nikto Scan Completed ###" >> "$OUTPUT_FILE"
-  echo "===================================================" >> "$OUTPUT_FILE"
-  echo "" >> "$OUTPUT_FILE"
+  echo -e "\n### Nikto Scan Completed ###\n" >> "$OUTPUT_FILE"
 }
 
-whatweb_scan() {
-  echo "### Starting WhatWeb Scan on $TARGET ###" >> "$OUTPUT_FILE"
+nuclei_scan() {
+  echo "### Starting Nuclei Scan on $1 ###" >> "$OUTPUT_FILE"
   echo "========================================" >> "$OUTPUT_FILE"
-  whatweb -a 3 -v "$1" >> "$OUTPUT_FILE" 2>&1
-  echo "" >> "$OUTPUT_FILE"
-  echo "### WhatWeb Scan Completed ###" >> "$OUTPUT_FILE"
-  echo "========================================" >> "$OUTPUT_FILE"
-  echo "" >> "$OUTPUT_FILE"
+  nuclei -u "$1" -o /tmp/nuclei_temp_output.txt >> "$OUTPUT_FILE" 2>&1
+  cat /tmp/nuclei_temp_output.txt >> "$OUTPUT_FILE"
+  echo -e "\n### Nuclei Scan Completed ###\n" >> "$OUTPUT_FILE"
+  rm -f /tmp/nuclei_temp_output.txt
 }
 
-wafw00f_scan() {
-  echo "### Starting wafw00f Scan on $TARGET ###" >> "$OUTPUT_FILE"
-  echo "=====================================" >> "$OUTPUT_FILE"
-  wafw00f "$TARGET" >> "$OUTPUT_FILE" 2>&1
-  echo "" >> "$OUTPUT_FILE"
-  echo "### wafw00f Scan Completed ###" >> "$OUTPUT_FILE"
-  echo "=====================================" >> "$OUTPUT_FILE"
-  echo "" >> "$OUTPUT_FILE"
+dnsrecon_scan_json() {
+  echo "### Starting dnsrecon Scan on $TARGET (JSON output only) ###" >> "$OUTPUT_FILE"
+  echo "=============================================================" >> "$OUTPUT_FILE"
+
+  DNSRECON_JSON_OUTPUT="$OUTPUT_DIR/${SANITIZED_TARGET}_${DATE}_dnsrecon.json"
+
+  dnsrecon -d "$TARGET" \
+    -a \
+    -t brt \
+    -D /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt \
+    --threads 30 \
+    -j "$DNSRECON_JSON_OUTPUT" >> "$OUTPUT_FILE" 2>&1
+
+  echo "dnsrecon JSON output saved to $DNSRECON_JSON_OUTPUT" >> "$OUTPUT_FILE"
+  echo -e "\n### dnsrecon Scan Completed ###\n" >> "$OUTPUT_FILE"
 }
 
-# Run scans sequentially with real-time updates
+# Run scans
 echo "Starting all scans for $TARGET"
-echo "Starting Nmap Scan on $TARGET"
+
+echo "Starting Nmap Scan..."
 nmap_scan
-echo "Nmap scan completed."
 
-echo "Starting Nmap HTTP Scripts Scan on $TARGET"
+echo "Starting Nmap HTTP Scripts Scan..."
 nmap_http_scan
-echo "Nmap HTTP scripts scan completed."
 
-echo "Starting testssl.sh Scan on $TARGET"
-testssl_scan
-echo "testssl.sh scan completed."
+echo "Starting sslscan..."
+sslscan_scan
 
-echo "Starting Nikto Scan on $TARGET"
+echo "Starting Nikto Scan..."
 nikto_scan
-echo "Nikto scan completed."
 
-echo "Starting WhatWeb Scan on $1"
-whatweb_scan "$1"
-echo "WhatWeb scan completed."
+echo "Starting Nuclei Scan..."
+nuclei_scan "$1"
 
-echo "Starting wafw00f Scan on $TARGET"
-wafw00f_scan
-echo "wafw00f scan completed."
+# Only run dnsrecon if the target is a domain
+if [[ "$TARGET" =~ [a-zA-Z] ]]; then
+  echo "Starting dnsrecon JSON Scan..."
+  dnsrecon_scan_json
+fi
 
 echo "All scans completed for $TARGET. Results saved to $OUTPUT_FILE."
 
