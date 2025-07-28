@@ -110,7 +110,7 @@ def interactive_mode():
     for i in range(n):
         print(f"\n--- Transaction {i+1} ---")
         date = input(f"Date (YYYYMMDD, default {today}): ").strip() or today
-        amount = input("Amount (negative for debit, default -1.00): ").strip() or "-1.00"
+        amount = input("Amount (default 1.00): ").strip() or "1.00"
         name = input("Payload for NAME field: ").strip() or "TestName"
         memo = input("Payload for MEMO field: ").strip() or "TestMemo"
         fitid = input("FITID (leave blank for random): ").strip()
