@@ -43,7 +43,7 @@ nmap_scan() {
 nmap_http_scan() {
   echo "### Starting Nmap HTTP Scripts Scan on $TARGET ###" >> "$OUTPUT_FILE"
   echo "==================================================" >> "$OUTPUT_FILE"
-  nmap -p "$PORT" --script http-enum,http-methods,http-headers,http-server-header,http-auth,http-robots.txt,http-config-backup "$TARGET" >> "$OUTPUT_FILE" 2>&1
+  nmap -p "$PORT" --script "http-title,http-enum,http-methods,http-headers,http-server-header,http-auth,http-robots.txt,http-config-backup,http-security-headers,http-cookie-flags,http-cors,http-vhosts,http-slowloris-check,http-csrf" "$TARGET" >> "$OUTPUT_FILE" 2>&1
   echo -e "\n### Nmap HTTP Scripts Scan Completed ###\n" >> "$OUTPUT_FILE"
 }
 
