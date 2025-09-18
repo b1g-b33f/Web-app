@@ -13,7 +13,7 @@
 [file_ext_bypass](https://github.com/b1g-b33f/Web-app/blob/main/file_ext_bypass.sh)
 - Creates worlist for file extension bypass fuzzing. Change extensions as needed.
 
-[Recon](https://github.com/b1g-b33f/Web-app/blob/main/osint.sh)
+[recon](https://github.com/b1g-b33f/Web-app/blob/main/osint.sh)
 - A compact reconnaissance helper that enumerates subdomains (subfinder, assetfinder — optional amass for deeper DNS enumeration), probes live hosts with httprobe, takes screenshots using gowitness v3, and resolves live hosts to IPv4 addresses. Outputs are organized per-domain (info, subdomains, screenshots) and it produces a unique_ips.txt ready for masscan/nmap.
 - Comment and uncomment Amass, massscan, nmap as needed
 - Run against multiple targets with `while read -r d; do ./recon.sh "$d"; done < hosts.txt`
