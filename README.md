@@ -8,7 +8,8 @@
 - strip domain names when performing zone transfer with dig. Output dig axfr to a txt file called dns.txt for it to work.
 
 [wasa](https://github.com/b1g-b33f/Web-app/blob/main/wasa.sh)
-- Bash script for web app pentest.
+- Simple reconnaissance & scanning wrapper: runs a full Nmap port/service scan and targeted HTTP NSE checks, then performs TLS/fingerprint scans (sslscan), web content scans (nikto), template-based vuln checks (nuclei), and optional dnsrecon DNS enumeration (domain-only).
+Outputs are saved to a dated file/dir (human-readable + Nmap -oA/Nuclei JSON), and the script checks for missing tools and skips scans gracefully—keeps behavior straightforward and non-intrusive for fast triage.
 
 [file_ext_bypass](https://github.com/b1g-b33f/Web-app/blob/main/file_ext_bypass.sh)
 - Creates worlist for file extension bypass fuzzing. Change extensions as needed.
