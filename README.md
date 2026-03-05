@@ -8,8 +8,7 @@
 - strip domain names when performing zone transfer with dig. Output dig axfr to a txt file called dns.txt for it to work.
 
 [wasa](https://github.com/b1g-b33f/Web-app/blob/main/wasa.sh)
-- Simple reconnaissance & scanning wrapper: runs a full Nmap port/service scan and targeted HTTP NSE checks, then performs TLS/fingerprint scans (sslscan), web content scans (nikto), template-based vuln checks (nuclei), and optional dnsrecon DNS enumeration (domain-only).
-Outputs are saved to a dated file/dir (human-readable + Nmap -oA/Nuclei JSON), and the script checks for missing tools and skips scans gracefully—keeps behavior straightforward and non-intrusive for fast triage.
+- Simple reconnaissance & scanning wrapper for single web app targets: runs WAF detection (wafw00f) and tech fingerprinting (whatweb) first, followed by a full Nmap port/service scan with targeted HTTP NSE checks, TLS analysis (sslscan), web content scanning (nikto), and template-based vuln checks (nuclei). Outputs are saved to a dated file with total scan duration logged. Validates all required tools are present before starting and fails fast if any are missing.
 
 [file_ext_bypass](https://github.com/b1g-b33f/Web-app/blob/main/file_ext_bypass.sh)
 - Creates worlist for file extension bypass fuzzing. Change extensions as needed.
